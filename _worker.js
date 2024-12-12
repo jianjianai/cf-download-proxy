@@ -47,7 +47,7 @@ function getHomePageHTML(host) {
         ">
             <pre style="margin: 0;" id="shwo-start">https://${host}/</pre>
         </div>
-        <button style="font-size: 1rem;margin-top: 0.5rem;" onclick="navigator.clipboard.writeText(document.getElementById(\`shwo-start\`).innerHTML)">复制</button>
+        <button style="font-size: 1rem;margin-top: 0.5rem;" onclick="navigator.clipboard.writeText(document.getElementById('shwo-start').innerHTML)">复制</button>
     </div>
     <script>
         document.getElementById("imput-link").addEventListener("input",(event)=>{
@@ -56,10 +56,10 @@ function getHomePageHTML(host) {
             try{
                 url = new URL(event.target.value);
             }catch(e){
-                document.getElementById("error-shwo").innerHTML = \`这不是一个合法的URL\`;
+                document.getElementById("error-shwo").innerHTML = '这不是一个合法的URL';
                 return;
             }
-            document.getElementById("error-shwo").innerHTML = ``;
+            document.getElementById("error-shwo").innerHTML = '';
             document.getElementById("shwo-start").innerHTML = "https://${host}/"+url;
         });
     </script>
