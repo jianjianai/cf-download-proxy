@@ -84,6 +84,7 @@ export default {
             goUrl = new URL(go);
         }catch(e){
             return new Response(`错误：${go} 不是一个正确的url : ${e}`, {
+                status:404,
                 headers: {
                     "content-type": "text/test;charset=utf-8"
                 }
